@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../imagenes/marmol.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color:black;
+    /*position: fixed;*/
+    font-size: 15px;
+    font-family: serif;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+}
+.img-logo{
+    height: 80px;
+    margin-left: 5%;
+}
+
+/*.menu{
+    width: auto;
+    margin-top: 19px;
+    margin-right: 5%;
+    }*/
+
+.menu ul{
+    display: flex;
+    list-style: none;
+
+    
+}
+.menu li a{
+    text-decoration: none;
+    color: wheat;
+    padding: 15px;
+    
+}
+.menu ul li a:hover{
+    color: whitesmoke;
+}
+
+main{
+    /*especifica el tipo de metodo de posicionamiento utilizado para un elemento
+    (static, relative, absolute, fixed)*/
+    position: relative;
+    top: 5px;
+    
+}
+
+.gallery-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /*Unidad VH son medidas relativas de acuerdo al viewport*/
+    height: 65vh;
+    
+}
+
+div.gallery-container div.gallery-item{
+    /*es una abreviatura para que el flex-grow, flex-shrink, flex-basis
+    flex-grow:1;
+    flex-shrink: 0;
+    flex-basis:auto;
+    Hace que el elemento flexible sea flexible y establece la base flexible en cero,
+
+    */
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: flex 0.5s ease-in-out;
+}
+
+.gallery-item span{
+    color: wheat;
+    font-weight: 600;
+    font-size: 20px 8px;
+    background-color: thistle;
+    opacity: 0.8;
+    transition: opacity 0.8s ease;
+    border-radius: 5px;
+
+}
+
+div.gallery-container div.gallery-item:hover span{
+    opacity: 0;
+
+}
+
+.gallery-container .gallery-item:hover{
+    /*flex grow: indica el factor de crecimiento del item respecto al resto
+    flex-shrink: indica el factor de crecimiento del item respecto al resto
+    flex basis: define el tamaño por defecto (de base) es decir, (unidades, porcentajes) tamaño
+    de ancho
+    propiedades flex: sirve de atajo para estas tres propiedades de los item hijos
+    flex: 6 3 auto;
+    */
+    flex: 4;
+}
+
+.gallery-container .gallery-item.g-item-1{
+    background-image: url(../imagenes/Galileo.jpeg);
+
+}
+
+.gallery-container .gallery-item.g-item-2{
+    background-image: url(../imagenes/frida.jpg);
+    }
+
+.gallery-container .gallery-item.g-item-3{
+    background-image: url(../imagenes/abraham.jpg);
+}
+
+.gallery-container .gallery-item.g-item-4{
+    background-image: url(../imagenes/einstein.jpg);
+}
+
+.gallery-container .gallery-item.gallery-item.g-item-5{
+    background-image: url(../imagenes/jesus.webp);
+}
+
+.bio{
+    margin-top: 3%;
+}
+
+h1{
+    text-align: center;
+    padding: 15px;
+    font-size: 100px;
+}
+
+.biografia{
+    width: 100%;
+    height: 430%;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.biografia .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 50px;
+    text-align: center;
+    transition: all 0.25s;
+    flex-direction: row;
+    background-color: rgb(0, 0, 0);
+}
+
+.biografia .card:hover{
+   box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2); 
+   transform: translateX(-50px)
+}
+
+.biografia .card img{
+    width: 330px;
+    height: 220px;
+}
+
+.biografia .card p{
+    font-size: 16px;
+    font-weight: 300;
+    color: wheat;
+}
+
+.biografia .card .titulo{
+    font-size: 25px;
+    font-weight: 300; 
+    color: whitesmoke;
+}
+
+h2{
+    text-align: center;
+    padding: 15px;
+    font-size: 100px;
+}
+
+.obras{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+     
+}
+
+
+.box{
+    background-color: rgb(241, 227, 201);
+    width: 650px;
+    height: 150px; 
+    text-align: center;
+      
+}
+
+.box1{
+    
+    width: 650px;
+    height: 220px; 
+    text-align: center;
+    margin-top: 3%; 
+    background-color: rgb(241, 227, 201);
+      
+}
+
+.box2{
+    background-color: rgb(241, 227, 201);
+    width: 650px;
+    height: 220px; 
+    text-align: center; 
+    margin-top: 3%;  
+}
+
+.box3{
+    background-color: rgb(241, 227, 201);
+    width: 650px;
+    height: 150px;  
+    text-align: center; 
+    margin-top: 3%;   
+}
+
+.box4{
+    background-color: rgb(241, 227, 201);
+    width: 650px;
+    height: 150px; 
+    text-align: center;
+    margin-top: 3%;   
+}
+
+.obras span{
+    font-size: 25px;   
+    color: black;
+    /*font-weight: 300; 
+    margin: 30%;   */
+}
+
+.box:hover{
+    transform:scale(1.5);
+    background-color: rgb(241, 227, 201);
+}
+
+.box1:hover{
+    transform:scale(1.5);
+    background-color: rgb(241, 227, 201);
+}
+
+.box2:hover{
+    transform:scale(1.5);
+    background-color: rgb(241, 227, 201);
+}
+
+.box3:hover{
+    transform:scale(1.5);
+    background-color: rgb(241, 227, 201);
+}
+
+.box4:hover{
+    transform:scale(1.5);
+    background-color: rgb(241, 227, 201);
+}
+
+.second-gallery{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 65vh;
+    margin-top: 5%;
+    
+}
+
+div.second-gallery div.gallery-item{
+       flex: 1;
+    height: 100%;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: flex 0.5s ease-in-out;
+}
+
+div.second-gallery div.gallery-item:hover span{
+    opacity: 0;
+
+}
+
+.second-gallery .gallery-item:hover{
+    flex: 2;
+}
+
+.second-gallery .gallery-item.b-item-1{
+    background-image: url(../imagenes/charles.jpg);
+
+}
+.second-gallery .gallery-item.b-item-2{
+    background-image: url(../imagenes/william.jpg);
+
+}
+
+.second-gallery .gallery-item.b-item-3{
+    background-image: url(../imagenes/napoleon.jpg);
+
+}
+
+.second-gallery .gallery-item.b-item-4{
+    background-image: url(../imagenes/Sigmund.jpg);
+
+}
+
+.second-gallery .gallery-item.b-item-5{
+    background-image: url(../imagenes/marie.jpg);
+
+}
+
+footer{
+    background-color: black;
+    color: blanchedalmond;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+/*
+.social-bar {
+    right: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    z-index: 100;
+
+}
+
+.icon{
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+/*
+.icon-facebook2{
+    background: #2e406e;
+    border-radius: 1rem 0 0 0;
+background-image: url(../imagenes/facebook.png);
+}
+
+.icon-twitter{
+    background: #339dc5;
+    border-radius: 0 1rem 0 0;
+    background-image: url(../imagenes/twitter.png);
+}
+
+.icon-instagram{
+    background: #3f60a5;
+    background-image: url(../imagenes/instagram.png);
+}
+
+.icon:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
+iframe{
+    justify-content: flex-end;
+} */
+.mapa p{
+    color: whitesmoke;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    
+}
+
+.about p{
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+.about h4{
+    color: whitesmoke;
+}
+
+.redes p{
+    color: whitesmoke;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
